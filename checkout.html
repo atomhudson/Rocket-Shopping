@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Checkout</title>
+
+    <!-- This code is needed for responsive design to work.
+      (Responsive design = make the website look good on
+      smaller screen sizes like a phone or a tablet). -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://www.paypal.com/sdk/js?client-id=AWsR7jGsRtmhu33Xg6FzZ9BsmJTMueHoc6J418SIbUAxCiBwYXj-2MvFg5sY7lFiojq9UDRBA0tBYgIl"></script>
+    <style>
+    
+        #paypal-button-container{
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            margin-right: 30%;
+            display: none;
+        }
+    
+     .cancel-btn {
+        border: none; /* No border */
+        color: white; /* White text */
+        padding: 15px 32px; /* Padding */
+        text-align: center; /* Center align text */
+        text-decoration: none; /* No underline */
+        display: inline-block; /* Display as inline block */
+        font-size: 16px; /* Font size */
+        margin: 4px 2px; /* Margin */
+        cursor: pointer; /* Cursor style */
+        border-radius: 8px; /* Rounded corners */
+        transition-duration: 0.4s;
+    }
+    .cancel-btn{
+        background-color: red;
+        display: none;
+        margin-right: 500px;
+    }
+    
+\
+    
+      </style>
+
+    <!-- Load a font called Roboto from Google Fonts. -->
+    <link rel="stylesheet" href="styles/shared/header_footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Here are the CSS files for this page. -->
+    <link rel="stylesheet" href="styles/shared/general.css">
+    <link rel="stylesheet" href="styles/pages/checkout/checkout-header.css">
+    <link rel="stylesheet" href="styles/pages/checkout/checkout.css">
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+    
+
+    <div class="main">
+      <div class="page-title">Review your order</div>
+
+      <div class="checkout-grid">
+        <div class="order-summary">
+          <div class="cart-item-container">
+            <div class="delivery-date">
+              Delivery date: Tuesday, June 21
+            </div>
+
+            <div class="cart-item-details-grid">
+              <img class="product-image"
+                src="images/products/athletic-cotton-socks-6-pairs.jpg">
+
+              <div class="cart-item-details">
+                <div class="product-name">
+                  Black and Gray Athletic Cotton Socks - 6 Pairs
+                </div>
+                <div class="product-price">
+                  1090
+                </div>
+                <div class="product-quantity">
+                  <span>
+                    Quantity: <span class="quantity-label">2</span>
+                  </span>
+                  <span class="update-quantity-link link-primary">
+                    Update
+                  </span>
+                  <span class="delete-quantity-link link-primary">
+                    Delete
+                  </span>
+                </div>
+              </div>
+
+              <div class="delivery-options">
+                <div class="delivery-options-title">
+                  Choose a delivery option:
+                </div>
+                <div class="delivery-option">
+                  <input type="radio" checked
+                    class="delivery-option-input"
+                    name="delivery-option-1">
+                  <div>
+                    <div class="delivery-option-date">
+                      Tuesday, June 21
+                    </div>
+                    <div class="delivery-option-price">
+                      FREE Shipping
+                    </div>
+                  </div>
+                </div>
+                <div class="delivery-option">
+                  <input type="radio"
+                    class="delivery-option-input"
+                    name="delivery-option-1">
+                  <div>
+                    <div class="delivery-option-date">
+                      Wednesday, June 15
+                    </div>
+                    <div class="delivery-option-price">
+                      40 - Shipping
+                    </div>
+                  </div>
+                </div>
+                <div class="delivery-option">
+                  <input type="radio"
+                    class="delivery-option-input"
+                    name="delivery-option-1">
+                  <div>
+                    <div class="delivery-option-date">
+                      Monday, June 13
+                    </div>
+                    <div class="delivery-option-price">
+                      90 - Shipping
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cart-item-container">
+            <div class="delivery-date">
+              Delivery date: Wednesday, June 15
+            </div>
+
+            <div class="cart-item-details-grid">
+              <img class="product-image"
+                src="images/products/intermediate-composite-basketball.jpg">
+
+              <div class="cart-item-details">
+                <div class="product-name">
+                  Intermediate Size Basketball
+                </div>
+                <div class="product-price">
+                  2095
+                </div>
+                <div class="product-quantity">
+                  <span>
+                    Quantity: <span class="quantity-label">1</span>
+                  </span>
+                  <span class="update-quantity-link link-primary">
+                    Update
+                  </span>
+                  <span class="delete-quantity-link link-primary">
+                    Delete
+                  </span>
+                </div>
+              </div>
+
+              <div class="delivery-options">
+                <div class="delivery-options-title">
+                  Choose a delivery option:
+                </div>
+
+                <div class="delivery-option">
+                  <input type="radio" class="delivery-option-input"
+                    name="delivery-option-2">
+                  <div>
+                    <div class="delivery-option-date">
+                      Tuesday, June 21
+                    </div>
+                    <div class="delivery-option-price">
+                      FREE Shipping
+                    </div>
+                  </div>
+                </div>
+                <div class="delivery-option">
+                  <input type="radio" checked class="delivery-option-input"
+                    name="delivery-option-2">
+                  <div>
+                    <div class="delivery-option-date">
+                      Wednesday, June 15
+                    </div>
+                    <div class="delivery-option-price">
+                      40 - Shipping
+                    </div>
+                  </div>
+                </div>
+                <div class="delivery-option">
+                  <input type="radio" class="delivery-option-input"
+                    name="delivery-option-2">
+                  <div>
+                    <div class="delivery-option-date">
+                      Monday, June 13
+                    </div>
+                    <div class="delivery-option-price">
+                      90 - Shipping
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="payment-summary">
+          <div class="payment-summary-title">
+            Order Summary
+          </div>
+
+          <div class="payment-summary-row">
+            <div>Items (3):</div>
+            <div class="payment-summary-money">4275</div>
+          </div>
+
+          <div class="payment-summary-row">
+            <div>Shipping &amp; handling:</div>
+            <div class="payment-summary-money">40</div>
+          </div>
+
+          <div class="payment-summary-row subtotal-row">
+            <div>Total before tax:</div>
+            <div class="payment-summary-money">4315</div>
+          </div>
+
+          <div class="payment-summary-row">
+            <div>Estimated tax (10%):</div>
+            <div class="payment-summary-money">431</div>
+          </div>
+
+          <div class="payment-summary-row total-row">
+            <div>Order total:</div>
+            <div class="payment-summary-money">4746</div>
+          </div>
+
+          <button class="place-order-button button-primary" onclick="showPayPalButton()">
+            Place your order
+          </button>
+        <button class="cancel-btn" onclick="hidePayPalButton()">Cancel</button>
+
+        <div id="paypal-button-container"></div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+  <script>
+    
+    var paypalButton;
+
+function showPayPalButton() {
+    // Show the PayPal button container
+    document.getElementById('paypal-button-container').style.display = 'block';
+
+    // Show the cancel button
+    document.querySelector('.cancel-btn').style.display = 'inline-block';
+
+    // Hide the check out button
+    document.querySelector('.place-order-button').style.display = 'none';
+
+    // Render the PayPal button
+    paypalButton = paypal.Buttons({
+        createOrder: function(data, actions) {
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: '10.00'
+                    }
+                }]
+            });
+        },
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+                alert('Transaction completed by ' + details.payer.name.given_name);
+                // Call your backend to save transaction details
+            });
+        }
+    }).render('#paypal-button-container');
+}
+
+function hidePayPalButton() {
+    // Hide the PayPal button container
+    document.getElementById('paypal-button-container').style.display = 'none';
+    
+    // Hide the cancel button
+    document.querySelector('.cancel-btn').style.display = 'none';
+
+    // Show the check out button
+    document.querySelector('.place-order-button').style.display = 'inline-block';
+
+    // Cancel PayPal checkout
+    if (paypalButton) {
+        paypalButton.close();
+    }
+}
+    </script>
+   
+
+
+    <div id="footer-placeholder"></div>
+    <script src="header_footer.js"></script>
+    <script type="module" src="jsfile/checkout.js"></script>
+  </body>
+</html>

@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+body{
+    margin: 0;
+    padding: 0;
+  }
+
+.banner {
+    background-image: url("/images/banner.jpg");
+    text-align: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 540px;
+    box-shadow: 0 0 10px 0 rgb(142, 141, 141);
+}
+.banner-content {
+    padding: 10% 50% 10% 0%;
+}
+.banner h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.banner p {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.banner a {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.banner a:hover {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+/* search by category */
+.below {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+.below p {
+    margin: 3px;
+}
+.cat1{
+    font-size: 0.8rem;;
+    font-weight: 400;
+    font-family: sans-serif;
+}
+.cat2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+.items{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #f5f5f5;
+    box-shadow: 30px 30px 30px 30px #f5f5f5;
+}
+.ite{
+    height: 350px;
+    width: 21%;
+    padding: 20px 0 15px;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 1.3rem;
+    margin-bottom: 5rem;
+    box-shadow: 7px 7px 10px 7px rgb(226, 221, 221);
+}
+.item-image {
+    height: 270px;
+    background-size: cover;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease; 
+}
+.item-image:hover{
+    transform: scale(1.06);
+}
+.item-content{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.item-content p {
+    columns: #007185;
+    font-weight: 500;
+}
+
+
+/* why choose us */
+.why-choose-us {
+    text-align: center;
+    padding: 50px;
+}
+
+.why-choose-us h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.why-choose-us p {
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+}
+
+.feature {
+    margin: 10px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    width: 250px;
+    border-radius: 5px;
+}
+
+.feature img {
+    margin-bottom: 10px;
+    width: 100px;
+    height: auto;
+}
+
+.feature h3 {
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.see {
+    font-size: 14px;
+    line-height: 1.5;
+}
